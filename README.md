@@ -33,8 +33,6 @@ A interface conta com um design moderno estilo *dark mode*, foco em usabilidade,
 
 ## 📂 Como Rodar o Projeto Localmente
 
-## 📂 Como Rodar o Projeto Localmente
-
 1. Clone este repositório:
 `git clone https://github.com/Livia-dev803/SkillTree.git`
 
