@@ -3,104 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SkillTree — Life Rank</title>
+  <title>LifeRank — Plataforma Gamificada</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- HUD DO JOGADOR -->
-  <header class="hud-header">
-    <div class="profile-bar">
-      <div class="player-title">
-        <span class="rank-tag">Ranks de Evolução</span>
-        <h1>Lívia</h1>
-      </div>
-      <div class="stats-badges">
-        <div class="badge badge-streak">🔥 <span id="streak-count">1</span> Dias</div>
-        <div class="badge badge-level">LVL <span id="user-level">1</span></div>
+  <nav class="navbar">
+    <div class="logo">⚡ LifeRank</div>
+    <ul class="nav-links">
+      <li><a href="#" class="active">DASHBOARD</a></li>
+      <li><a href="#">RANKING</a></li>
+      <li><a href="#">HISTÓRICO</a></li>
+      <li><a href="#">CALENDÁRIO</a></li>
+      <li><a href="#">CLUBES</a></li>
+    </ul>
+    <div class="auth-buttons">
+      <button class="btn-login">ENTRAR</button>
+      <button class="btn-register">CRIAR CONTA</button>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+      <span class="badge-tag">O CLUB DE PERFORMANCE PREMIUM</span>
+      <h1>SUBA DE NÍVEL<br>NA SUA ROTINA.</h1>
+      <p>Transforme sua produtividade em um esporte profissional. Entre numa comunidade de elite onde cada conquista é celebrada e cada meta é um marco rumo ao status lendário.</p>
+      <div class="hero-cta">
+        <button class="btn-primary">COMEÇAR NOVA TEMPORADA</button>
+        <button class="btn-secondary">VER RANKING</button>
       </div>
     </div>
 
-    <div class="xp-hud">
-      <div class="xp-labels">
-        <span>EXPERIÊNCIA</span>
-        <span><span id="current-xp">0</span> / <span id="next-level-xp">100</span> XP</span>
-      </div>
-      <div class="xp-bar-outer">
-        <div class="xp-bar-inner" id="xp-fill"></div>
-      </div>
+    <div class="hero-card">
+      <div class="level-unlocked">NOVA CONQUISTA<br><strong>NÍVEL 24 ALCANÇADO</strong></div>
+      <div style="font-size: 4rem; margin: 1.5rem 0;">🤖</div>
+      <p style="color: #64748b; font-size: 0.85rem;">Mascote LifeRank</p>
     </div>
   </header>
 
-  <!-- PAINEL DAS ÁRVORES / RAMOS DE HABILIDADE -->
-  <main class="dashboard-grid">
+  <section class="dark-section">
+    <div class="dark-container">
+      <h2>PRIVILÉGIOS DO CLUBE</h2>
 
-    <!-- RAMO 1: DESENVOLVIMENTO -->
-    <section class="branch-card">
-      <div class="branch-header">
-        <span class="branch-icon">💻</span>
-        <h2>Desenvolvimento</h2>
-      </div>
-
-      <div class="quest-item">
-        <div class="quest-info">
-          <h3>Estudos Front-end / Projetos</h3>
-          <span class="quest-reward">+30 XP</span>
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-header">
+            <div class="icon-box">🔥</div>
+            <div>
+              <div class="big-number">124</div>
+              <div class="sub-text">DIAS DE STREAK</div>
+            </div>
+          </div>
+          <p class="sub-text">Constância é a chave para a evolução.</p>
         </div>
-        <button class="btn-quest" onclick="completeQuest(30, this)">CONCLUIR MISSÃO</button>
-      </div>
 
-      <div class="quest-item">
-        <div class="quest-info">
-          <h3>Modelagem de Banco de Dados</h3>
-          <span class="quest-reward">+40 XP</span>
+        <div class="metric-card">
+          <div class="metric-header">
+            <div class="icon-box">🏆</div>
+            <div>
+              <div style="font-weight: 800; font-size: 1.2rem;">PONTOS & XP</div>
+              <div class="sub-text">Ganhe reputação por cada tarefa concluída.</div>
+            </div>
+          </div>
+          <div style="margin-top: 1rem; color: #38bdf8; font-weight: 700;">750 / 1000 XP</div>
         </div>
-        <button class="btn-quest" onclick="completeQuest(40, this)">CONCLUIR MISSÃO</button>
-      </div>
-    </section>
-
-    <!-- RAMO 2: FITNESS & PERFORMANCE -->
-    <section class="branch-card">
-      <div class="branch-header">
-        <span class="branch-icon">⚡</span>
-        <h2>Fitness & Saúde</h2>
       </div>
 
-      <div class="quest-item">
-        <div class="quest-info">
-          <h3>Treino Diário Concluído</h3>
-          <span class="quest-reward">+35 XP</span>
+      <div class="metric-card" style="margin-bottom: 2rem;">
+        <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">RANKING EM TEMPO REAL</h3>
+        <p class="sub-text">Dispute contra profissionais do mundo todo.</p>
+        <div class="ranking-list">
+          <div class="ranking-item"><span>#1 Legend_Dev</span><span style="color: #f59e0b;">8.1k</span></div>
+          <div class="ranking-item" style="border: 1px solid #2563eb;"><span>#2 Você (Lívia)</span><span style="color: #38bdf8;">7.2k</span></div>
+          <div class="ranking-item"><span>#3 Pro_Runner</span><span style="color: #94a3b8;">6.8k</span></div>
         </div>
-        <button class="btn-quest" onclick="completeQuest(35, this)">CONCLUIR MISSÃO</button>
       </div>
 
-      <div class="quest-item">
-        <div class="quest-info">
-          <h3>Hidratação & Suplementação</h3>
-          <span class="quest-reward">+15 XP</span>
-        </div>
-        <button class="btn-quest" onclick="completeQuest(15, this)">CONCLUIR MISSÃO</button>
-      </div>
-    </section>
-
-    <!-- RAMO 3: CONCURSOS & ROTINA -->
-    <section class="branch-card">
-      <div class="branch-header">
-        <span class="branch-icon">🎯</span>
-        <h2>Foco & Rotina</h2>
+      <h3 style="font-size: 1.1rem; margin-top: 2rem;">CONQUISTAS DESBLOQUEADAS</h3>
+      <div class="achievements-grid">
+        <div class="achievement-box unlocked"><div class="icon">🏃</div>MADRUGADOR</div>
+        <div class="achievement-box unlocked"><div class="icon">⚡</div>MENTE DE FERRO</div>
+        <div class="achievement-box unlocked"><div class="icon">🔥</div>100 DIAS</div>
+        <div class="achievement-box"><div class="icon">🔒</div>POLÍMATA</div>
+        <div class="achievement-box"><div class="icon">🔒</div>BLINDADO</div>
+        <div class="achievement-box"><div class="icon">🔒</div>INVICTO</div>
       </div>
 
-      <div class="quest-item">
-        <div class="quest-info">
-          <h3>Sessão de Questões / Flashcards</h3>
-          <span class="quest-reward">+25 XP</span>
-        </div>
-        <button class="btn-quest" onclick="completeQuest(25, this)">CONCLUIR MISSÃO</button>
-      </div>
-
-    </section>
-
-  </main>
+    </div>
+  </section>
 
   <script src="script.js"></script>
 </body>
