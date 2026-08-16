@@ -3,40 +3,103 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SkillTree — Gamificação de Rotina</title>
+  <title>SkillTree — Life Rank</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- PAINEL DO JOGADOR -->
-  <header class="player-profile">
-    <div class="user-info">
-      <h1>Lívia</h1>
-      <span class="level-badge">Nível <span id="user-level">1</span></span>
+  <!-- HUD DO JOGADOR -->
+  <header class="hud-header">
+    <div class="profile-bar">
+      <div class="player-title">
+        <span class="rank-tag">Ranks de Evolução</span>
+        <h1>Lívia</h1>
+      </div>
+      <div class="stats-badges">
+        <div class="badge badge-streak">🔥 <span id="streak-count">1</span> Dias</div>
+        <div class="badge badge-level">LVL <span id="user-level">1</span></div>
+      </div>
     </div>
-    <div class="xp-container">
-      <p>XP: <span id="current-xp">0</span> / <span id="next-level-xp">100</span></p>
-      <div class="xp-bar-bg">
-        <div class="xp-bar-fill" id="xp-fill"></div>
+
+    <div class="xp-hud">
+      <div class="xp-labels">
+        <span>EXPERIÊNCIA</span>
+        <span><span id="current-xp">0</span> / <span id="next-level-xp">100</span> XP</span>
+      </div>
+      <div class="xp-bar-outer">
+        <div class="xp-bar-inner" id="xp-fill"></div>
       </div>
     </div>
   </header>
 
-  <!-- ÁRVORE DE HABILIDADES / MISSÕES -->
-  <main class="skill-tree-container">
-    <h2>Sua Árvore de Habilidades</h2>
-    <div class="skills-grid">
-      <article class="skill-card">
-        <h3>Estudos de Front-end</h3>
-        <p>Recompensa: +25 XP</p>
-        <button class="btn-complete">Concluir Missão</button>
-      </article>
-      <article class="skill-card">
-        <h3>Treino Diário</h3>
-        <p>Recompensa: +30 XP</p>
-        <button class="btn-complete">Concluir Missão</button>
-      </article>
-  </div>
+  <!-- PAINEL DAS ÁRVORES / RAMOS DE HABILIDADE -->
+  <main class="dashboard-grid">
+
+    <!-- RAMO 1: DESENVOLVIMENTO -->
+    <section class="branch-card">
+      <div class="branch-header">
+        <span class="branch-icon">💻</span>
+        <h2>Desenvolvimento</h2>
+      </div>
+
+      <div class="quest-item">
+        <div class="quest-info">
+          <h3>Estudos Front-end / Projetos</h3>
+          <span class="quest-reward">+30 XP</span>
+        </div>
+        <button class="btn-quest" onclick="completeQuest(30, this)">CONCLUIR MISSÃO</button>
+      </div>
+
+      <div class="quest-item">
+        <div class="quest-info">
+          <h3>Modelagem de Banco de Dados</h3>
+          <span class="quest-reward">+40 XP</span>
+        </div>
+        <button class="btn-quest" onclick="completeQuest(40, this)">CONCLUIR MISSÃO</button>
+      </div>
+    </section>
+
+    <!-- RAMO 2: FITNESS & PERFORMANCE -->
+    <section class="branch-card">
+      <div class="branch-header">
+        <span class="branch-icon">⚡</span>
+        <h2>Fitness & Saúde</h2>
+      </div>
+
+      <div class="quest-item">
+        <div class="quest-info">
+          <h3>Treino Diário Concluído</h3>
+          <span class="quest-reward">+35 XP</span>
+        </div>
+        <button class="btn-quest" onclick="completeQuest(35, this)">CONCLUIR MISSÃO</button>
+      </div>
+
+      <div class="quest-item">
+        <div class="quest-info">
+          <h3>Hidratação & Suplementação</h3>
+          <span class="quest-reward">+15 XP</span>
+        </div>
+        <button class="btn-quest" onclick="completeQuest(15, this)">CONCLUIR MISSÃO</button>
+      </div>
+    </section>
+
+    <!-- RAMO 3: CONCURSOS & ROTINA -->
+    <section class="branch-card">
+      <div class="branch-header">
+        <span class="branch-icon">🎯</span>
+        <h2>Foco & Rotina</h2>
+      </div>
+
+      <div class="quest-item">
+        <div class="quest-info">
+          <h3>Sessão de Questões / Flashcards</h3>
+          <span class="quest-reward">+25 XP</span>
+        </div>
+        <button class="btn-quest" onclick="completeQuest(25, this)">CONCLUIR MISSÃO</button>
+      </div>
+
+    </section>
+
   </main>
 
   <script src="script.js"></script>
