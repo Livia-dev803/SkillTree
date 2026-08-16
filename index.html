@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillTree — Gamificação de Rotina</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- PAINEL DO JOGADOR -->
+  <header class="player-profile">
+    <div class="user-info">
+      <h1>Lívia</h1>
+      <span class="level-badge">Nível <span id="user-level">1</span></span>
+    </div>
+    <div class="xp-container">
+      <p>XP: <span id="current-xp">0</span> / <span id="next-level-xp">100</span></p>
+      <div class="xp-bar-bg">
+        <div class="xp-bar-fill" id="xp-fill"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ÁRVORE DE HABILIDADES / MISSÕES -->
+  <main class="skill-tree-container">
+    <h2>Sua Árvore de Habilidades</h2>
+    <div class="skills-grid">
+      <article class="skill-card">
+        <h3>Estudos de Front-end</h3>
+        <p>Recompensa: +25 XP</p>
+        <button class="btn-complete">Concluir Missão</button>
+      </article>
+      <article class="skill-card">
+        <h3>Treino Diário</h3>
+        <p>Recompensa: +30 XP</p>
+        <button class="btn-complete">Concluir Missão</button>
+      </article>
+    </div>
+  </main>
+
+</body>
+</html>
